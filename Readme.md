@@ -97,3 +97,8 @@ SELECT User, Host, plugin FROM mysql.user;
 mysql> UPDATE user SET plugin='mysql_native_password' WHERE User='root';
 mysql> COMMIT; 
 ```
+
+# To grant all privilege
+```
+grant all privileges on *.* to root@localhost identified by 'password' with grant option;
+```
