@@ -30,3 +30,6 @@ username is the user account you want to add to the sudo group.
 ```
 getent group sudo
 ```
+mYSQL wRONG PASSWORD
+
+https://stackoverflow.com/questions/50995864/mysql-set-root-password-wrong
