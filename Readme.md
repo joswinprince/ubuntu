@@ -75,3 +75,8 @@ STOPPING server from pid file /var/run/mysqld/mysqld.pid
 mysqld_safe[6186]: ended
 
 [1]+  Done                    mysqld_safe --skip-grant-tables
+
+To start service
+```
+sudo service mysql start
+```
