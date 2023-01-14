@@ -33,3 +33,45 @@ getent group sudo
 mYSQL wRONG PASSWORD
 
 https://stackoverflow.com/questions/50995864/mysql-set-root-password-wrong
+
+# STOP my sql service
+```
+service mysql stop
+```
+
+start msql server without password
+```
+mysqld_safe --skip-grant-tables &
+```
+
+Connect to the MySQL server using the MySQL client:
+```
+mysql -u root
+```
+
+Set a new MySQL root user password:
+```
+mysql> use mysql;
+mysql> update user set password=PASSWORD("NEW-ROOT-PASSWORD") where User='root';
+mysql> flush privileges;
+mysql> quit
+```
+
+# MySQL 5.7.6 and newer
+```
+mysql> use mysql;
+mysql> SET PASSWORD FOR 'root'@'localhost' = PASSWORD("newpass");
+mysql> flush privileges;
+mysql> quit
+```
+Stop the MySQL server:
+```
+service mysql stop
+```
+Output:
+
+Stopping MySQL database server: mysqld
+STOPPING server from pid file /var/run/mysqld/mysqld.pid
+mysqld_safe[6186]: ended
+
+[1]+  Done                    mysqld_safe --skip-grant-tables
