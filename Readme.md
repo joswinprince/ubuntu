@@ -92,3 +92,8 @@ sudo mysql_secure_installation
 ```
 SELECT User, Host, plugin FROM mysql.user;
 ```
+# To set plugin as mysql_native_server
+```
+mysql> UPDATE user SET plugin='mysql_native_password' WHERE User='root';
+mysql> COMMIT; 
+```
