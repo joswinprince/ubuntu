@@ -84,3 +84,7 @@ mysql runs with configitation based files on linux
 ```
 sudo mysql --defaults-file=/etc/mysql/debian.cnf
 ```
+
+```
+sudo mysql_secure_installation
+```
