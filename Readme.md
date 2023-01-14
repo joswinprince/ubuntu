@@ -88,3 +88,7 @@ sudo mysql --defaults-file=/etc/mysql/debian.cnf
 ```
 sudo mysql_secure_installation
 ```
+# To get database related info
+```
+SELECT User, Host, plugin FROM mysql.user;
+```
