@@ -1,0 +1,14 @@
+from crontab import CronTab
+
+# create a cron object
+cron = CronTab(user='your_username')
+
+# iterate through all jobs in cron
+for job in cron:
+    # check if the job's comment matches the desired comment
+    if job.comment == 'comment_to_remove':
+        # remove the job
+        cron.remove(job)
+
+# write the updated cron to disk
+cron.write()
